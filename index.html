@@ -1,0 +1,19 @@
+<html>
+
+<head>
+	<script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.css" />
+</head>
+
+<body>
+	<gradio-lite>
+		import gradio as gr
+
+		gr.Interface(
+			lambda x: x, gr.Image(source="webcam", streaming=True), "image", live=True
+		).launch()
+		
+	</gradio-lite>
+</body>
+
+</html>
